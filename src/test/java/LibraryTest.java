@@ -50,14 +50,14 @@ public class LibraryTest {
     public void canGetGenreCount1() {
         library.addBook(book1);
         library.addBook(book2);
-        assertEquals(2, library.getGenreCount("Fantasy"));
+        assertEquals(2, library.countGenre("Fantasy"));
     }
 
     @Test
     public void canGetGenreCount2() {
         library.addBook(book1);
         library.addBook(book3);
-        assertEquals(1, library.getGenreCount("Fantasy"));
-        assertEquals(1, library.getGenreCount("Sci-Fi"));
+        assertEquals(1, library.countGenre("Fantasy"));
+        assertEquals(1, library.countGenre("Sci-Fi"));
     }
 }
