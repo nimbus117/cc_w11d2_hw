@@ -11,4 +11,10 @@ public class Borrower {
     public int countBooks() {
         return borrowedBooks.size();
     }
+
+    public void takeBook(Library library, Book book) {
+        if (library.removeBook(book)) {
+            borrowedBooks.add(book);
+        }
+    }
 }

@@ -17,7 +17,6 @@ public class Library {
         if (countBooks() < capacity) {
             bookCollection.add(book);
         }
-        System.out.println(book.getTitle());
     }
 
     public boolean removeBook(Book book) {
