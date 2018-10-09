@@ -27,6 +27,7 @@ public class LibraryTest {
         library.addBook(book1);
         assertEquals(1, library.countBooks());
     }
+
     @Test
 
     public void cantAddBookWhenCapacityFull() {
@@ -43,5 +44,20 @@ public class LibraryTest {
         boolean expected = library.removeBook(book2);
         assertEquals(true, expected);
         assertEquals(1, library.countBooks());
+    }
+
+    @Test
+    public void canGetGenreCount1() {
+        library.addBook(book1);
+        library.addBook(book2);
+        assertEquals(2, library.getGenreCount("Fantasy"));
+    }
+
+    @Test
+    public void canGetGenreCount2() {
+        library.addBook(book1);
+        library.addBook(book3);
+        assertEquals(1, library.getGenreCount("Fantasy"));
+        assertEquals(1, library.getGenreCount("Sci-Fi"));
     }
 }
