@@ -8,6 +8,7 @@ public class LibraryTest {
     private Book book1;
     private Book book2;
     private Book book3;
+
     @Before
     public void before() {
         library = new Library(2);
@@ -39,9 +40,8 @@ public class LibraryTest {
     public void canRemoveBook() {
         library.addBook(book1);
         library.addBook(book2);
-        library.addBook(book3);
         boolean expected = library.removeBook(book2);
         assertEquals(true, expected);
-        assertEquals(2, library.countBooks());
+        assertEquals(1, library.countBooks());
     }
 }
